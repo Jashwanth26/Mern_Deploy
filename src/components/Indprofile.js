@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, Navigate, useParams } from 'react-router-dom';
 import axios from 'axios';
-import '../styles/review.css';
 
 const Indprofile = () => {
   const { fullname, email, skill, _id } = useParams();

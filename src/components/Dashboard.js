@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { Navigate } from 'react-router-dom';
 import axios from 'axios';
-import '../styles/dashboard.css';
 
 const Dashboard = () => {
     const [data, setData] = useState([]);
