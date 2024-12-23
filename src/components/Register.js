@@ -19,7 +19,7 @@ export default function Signup() {
 
     const submitHandler = (e) => {
         e.preventDefault();
-        axios.post('https://jashwanth26.github.io/Developers-Hub---Basic-Freelancer-website-backend/api/user/register', data)
+        axios.post('https://developers-hub-basic-freelancer-website-backend-cr4r.vercel.app/api/user/register', data)
             .then(() => {
                 alert("Registered successfully");
                 setData({

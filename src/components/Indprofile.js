@@ -9,7 +9,7 @@ const Indprofile = () => {
 
   useEffect(() => {
     axios
-      .get(`https://jashwanth26.github.io/Developers-Hub---Basic-Freelancer-website-backend/api/review/${_id}`, {
+      .get(`https://developers-hub-basic-freelancer-website-backend-cr4r.vercel.app/api/review/${_id}`, {
         headers: {
           'x-token': localStorage.getItem('token'),
         },
@@ -28,7 +28,7 @@ const Indprofile = () => {
     e.preventDefault();
 
     axios
-      .get('https://jashwanth26.github.io/Developers-Hub---Basic-Freelancer-website-backend/api/user/myprofile', {
+      .get('https://developers-hub-basic-freelancer-website-backend-cr4r.vercel.app/api/user/myprofile', {
         headers: {
           'x-token': localStorage.getItem('token'),
         },
@@ -56,7 +56,7 @@ const Indprofile = () => {
         };
 
         axios
-          .post('https://jashwanth26.github.io/Developers-Hub---Basic-Freelancer-website-backend/api/review/addreview', review, {
+          .post('https://developers-hub-basic-freelancer-website-backend-cr4r.vercel.app/api/review/addreview', review, {
             headers: {
               'x-token': localStorage.getItem('token'),
             },
