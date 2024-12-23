@@ -23,7 +23,7 @@ export default function ValidateOTP() {
         const token = localStorage.getItem('forgotPasswordToken'); // Retrieve token from localStorage
         const otpCode = otp.join(''); // Combine OTP array into a single string
 
-        axios.post('https://jashwanth26.github.io/Developers-Hub---Basic-Freelancer-website-backend/api/user/validate-otp', {
+        axios.post('http://localhost:5000/api/user/validate-otp', {
             otp: otpCode,
             token: token,
         })

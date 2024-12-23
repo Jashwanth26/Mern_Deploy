@@ -12,12 +12,14 @@ const app = express();
 connectDB();
 
 // Middleware
-app.use(express.json());
-app.use(cors({ 
-  origin: 'https://developers-hub-basic-freelancing-website-kfga.vercel.app', // Allow only this origin
-  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allow specific methods
-  allowedHeaders: ['Content-Type', 'Authorization'] // Allow specific headers
-}));
+
+app.use(cors({
+    origin: ['https://developers-hub-basic-freelancing-website-kfga.vercel.app'], // or '*' to allow all origins
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    credentials: true
+  }));
+
+  app.use(express.json());
 
 // Routes
 app.use('/api/user', devuserRoutes);

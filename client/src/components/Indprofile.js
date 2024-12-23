@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, Navigate, useParams } from 'react-router-dom';
 import axios from 'axios';
-import '../styles/review.css';
 
 const Indprofile = () => {
   const { fullname, email, skill, _id } = useParams();
@@ -10,7 +9,7 @@ const Indprofile = () => {
 
   useEffect(() => {
     axios
-      .get(`https://jashwanth26.github.io/Developers-Hub---Basic-Freelancer-website-backend/api/review/${_id}`, {
+      .get(`http://localhost:5000/api/review/${_id}`, {
         headers: {
           'x-token': localStorage.getItem('token'),
         },
@@ -29,7 +28,7 @@ const Indprofile = () => {
     e.preventDefault();
 
     axios
-      .get('https://jashwanth26.github.io/Developers-Hub---Basic-Freelancer-website-backend/api/user/myprofile', {
+      .get('http://localhost:5000/api/user/myprofile', {
         headers: {
           'x-token': localStorage.getItem('token'),
         },
@@ -57,7 +56,7 @@ const Indprofile = () => {
         };
 
         axios
-          .post('https://jashwanth26.github.io/Developers-Hub---Basic-Freelancer-website-backend/api/review/addreview', review, {
+          .post('http://localhost:5000/api/review/addreview', review, {
             headers: {
               'x-token': localStorage.getItem('token'),
             },

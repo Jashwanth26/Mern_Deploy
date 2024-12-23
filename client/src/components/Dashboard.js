@@ -2,12 +2,11 @@ import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { Navigate } from 'react-router-dom';
 import axios from 'axios';
-import '../styles/dashboard.css';
 
 const Dashboard = () => {
     const [data, setData] = useState([]);
     useEffect(() => {
-        axios.get('https://jashwanth26.github.io/Developers-Hub---Basic-Freelancer-website-backend/api/user/allprofiles', {
+        axios.get('http://localhost:5000/api/user/allprofiles', {
             headers: {
                 'x-token': localStorage.getItem('token')
             }
