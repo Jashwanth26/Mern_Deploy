@@ -6,7 +6,7 @@ import axios from 'axios';
 const Dashboard = () => {
     const [data, setData] = useState([]);
     useEffect(() => {
-        axios.get('http://localhost:5000/api/user/allprofiles', {
+        axios.get('https://mern-deploy-server-theta.vercel.app/api/user/allprofiles', {
             headers: {
                 'x-token': localStorage.getItem('token')
             }
