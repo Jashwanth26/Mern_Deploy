@@ -9,7 +9,7 @@ const Indprofile = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/api/review/${_id}`, {
+      .get(`https://mern-deploy-server-theta.vercel.app/api/review/${_id}`, {
         headers: {
           'x-token': localStorage.getItem('token'),
         },
@@ -28,7 +28,7 @@ const Indprofile = () => {
     e.preventDefault();
 
     axios
-      .get('http://localhost:5000/api/user/myprofile', {
+      .get('https://mern-deploy-server-theta.vercel.app/api/user/myprofile', {
         headers: {
           'x-token': localStorage.getItem('token'),
         },
@@ -56,7 +56,7 @@ const Indprofile = () => {
         };
 
         axios
-          .post('http://localhost:5000/api/review/addreview', review, {
+          .post('https://mern-deploy-server-theta.vercel.app/api/review/addreview', review, {
             headers: {
               'x-token': localStorage.getItem('token'),
             },
