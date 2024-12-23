@@ -15,7 +15,7 @@ export default function Login() {
 
     const submitHandler = (e) => {
         e.preventDefault();
-        axios.post('http://localhost:5000/api/user/login', data)
+        axios.post('https://mern-deploy-server-theta.vercel.app/api/user/login', data)
             .then(res => {
                 localStorage.setItem('token', res.data.token);
                 setAuth(true);
