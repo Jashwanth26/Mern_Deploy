@@ -15,7 +15,7 @@ export default function Login() {
 
     const submitHandler = (e) => {
         e.preventDefault();
-        axios.post('http://localhost:5000/api/user/login', data)
+        axios.post('https://jashwanth26.github.io/Developers-Hub---Basic-Freelancer-website-backend/api/user/login', data)
             .then(res => {
                 localStorage.setItem('token', res.data.token);
                 setAuth(true);

@@ -14,7 +14,7 @@ export default function ForgotPassword() {
 
     const submitHandler = (e) => {
         e.preventDefault();
-        axios.post('http://localhost:5000/api/user/forgot-password', data)
+        axios.post('https://jashwanth26.github.io/Developers-Hub---Basic-Freelancer-website-backend/api/user/forgot-password', data)
             .then((response) => {
                 const { token } = response.data; 
                 localStorage.setItem('forgotPasswordToken', token); 

@@ -7,13 +7,13 @@ const Myprofile = () => {
   const [review, setReview] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/user/myprofile', {
+    axios.get('https://jashwanth26.github.io/Developers-Hub---Basic-Freelancer-website-backend/api/user/myprofile', {
       headers: {
         'x-token': localStorage.getItem('token'),
       },
     }).then(res => setData(res.data));
 
-    axios.get('http://localhost:5000/api/review/myreview', {
+    axios.get('https://jashwanth26.github.io/Developers-Hub---Basic-Freelancer-website-backend/api/review/myreview', {
       headers: {
         'x-token': localStorage.getItem('token'),
       },

@@ -30,7 +30,7 @@ export default function ResetPassword() {
         const requestData = { token, ...data };
 
         axios
-            .post('http://localhost:5000/api/user/reset-password', requestData)
+            .post('https://jashwanth26.github.io/Developers-Hub---Basic-Freelancer-website-backend/api/user/reset-password', requestData)
             .then(() => {
                 setSuccess('Password changed successfully');
                 setError('');

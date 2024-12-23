@@ -7,7 +7,7 @@ import '../styles/dashboard.css';
 const Dashboard = () => {
     const [data, setData] = useState([]);
     useEffect(() => {
-        axios.get('http://localhost:5000/api/user/allprofiles', {
+        axios.get('https://jashwanth26.github.io/Developers-Hub---Basic-Freelancer-website-backend/api/user/allprofiles', {
             headers: {
                 'x-token': localStorage.getItem('token')
             }
